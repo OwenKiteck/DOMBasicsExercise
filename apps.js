@@ -12,11 +12,12 @@ h1.innerText = `The Best Animated Superhero TV Shows Ever!`;
 
 const honorableMentions = document.querySelector(`#honorable-mentions`);
 
-honorableMentions.innerHTML = `<p>OTHER GREAT SHOWS<p/>`;
+// 6
+honorableMentions.innerHTML = `<p>OTHER GREAT SHOWS</p>`;
 
 // 7
 const aTag = document.querySelector(`a`)
-aTag.innerHTML = `<a href="https://fandomwire.com/15-greatest-animated-superhero-shows-ever-made-ranked/">The Best Animated Superhero TV Shows Ever</a>`;
+aTag.href = `https://fandomwire.com/15-greatest-animated-superhero-shows-ever-made-ranked/`;
 
 // 8
 h1.classList.add(`background`, `text-color`)
@@ -39,3 +40,23 @@ aTag.insertAdjacentElement(`afterend`, h5)
 const li = document.querySelector(`li`)
 li.remove();
 
+
+// BONUS
+const divs = document.querySelectorAll(`div`);
+for (d of divs){
+    d.classList.toggle(`background`)
+}
+
+const avengers = [
+    "Forever",
+    "Fight",
+    "As",
+    "One",
+    "AVENGERS",
+    "ASSEMBLE!"
+];
+for (item of avengers){
+    const newSpan = document.createElement(`span`)
+    newSpan.innerText = `${item} `;
+    body.insertAdjacentElement(`beforeend`, newSpan)
+}
